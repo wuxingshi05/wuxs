@@ -1,0 +1,17 @@
+.account{
+    width: 200px;
+    height: 30px;
+}
+
+.pwd{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px    ;
+}
+
+.btn{
+    width: 50px;
+    height: 30px;
+    margin-top: 20px;
+
+}

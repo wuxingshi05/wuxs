@@ -1,27 +1,12 @@
-package com.wuxs.myspringbootmybatis.domain;
+package com.wuxs.myspringbootmybatis.form;
 
-import java.time.LocalDateTime;
-import java.util.Date;
-
-public class User {
-    private String id;
+public class RegisteredForm {
     private String account;
     private String password;
     private String name;
     private String sex;
     private String addr;
     private String email;
-    private Integer flag;
-    private String createTime;
-    private String updateTime;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getAccount() {
         return account;
@@ -71,43 +56,15 @@ public class User {
         this.email = email;
     }
 
-    public Integer getFlag() {
-        return flag;
-    }
-
-    public void setFlag(Integer flag) {
-        this.flag = flag;
-    }
-
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", account='" + account + '\'' +
+        return "RegisteredForm{" +
+                "account='" + account + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", addr='" + addr + '\'' +
                 ", email='" + email + '\'' +
-                ", flag=" + flag +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
                 '}';
     }
 }
