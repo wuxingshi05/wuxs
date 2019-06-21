@@ -7,6 +7,8 @@ public class RegisteredForm {
     private String sex;
     private String addr;
     private String email;
+    private String msg;
+    private String code;
 
     public String getAccount() {
         return account;
@@ -56,6 +58,22 @@ public class RegisteredForm {
         this.email = email;
     }
 
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     @Override
     public String toString() {
         return "RegisteredForm{" +
@@ -65,6 +83,8 @@ public class RegisteredForm {
                 ", sex='" + sex + '\'' +
                 ", addr='" + addr + '\'' +
                 ", email='" + email + '\'' +
+                ", msg='" + msg + '\'' +
+                ", code='" + code + '\'' +
                 '}';
     }
 }

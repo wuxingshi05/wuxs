@@ -1,7 +1,4 @@
-package com.wuxs.myspringbootmybatis.domain;
-
-import java.time.LocalDateTime;
-import java.util.Date;
+package com.wuxs.myspringbootmybatis.entity;
 
 public class User {
     private String id;

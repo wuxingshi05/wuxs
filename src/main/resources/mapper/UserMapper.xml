@@ -10,7 +10,7 @@
             and password = #{password}
     </select>
 
-    <insert id="insertUser" parameterType="com.wuxs.myspringbootmybatis.domain.User">
+    <insert id="insertUser" parameterType="com.wuxs.myspringbootmybatis.entity.User">
         insert into user values (#{id},#{account},#{password},#{name},#{sex},#{addr},#{email},#{flag},now(),now())
     </insert>
 

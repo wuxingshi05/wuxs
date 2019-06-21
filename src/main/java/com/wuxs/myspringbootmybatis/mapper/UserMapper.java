@@ -1,6 +1,6 @@
 package com.wuxs.myspringbootmybatis.mapper;
 
-import com.wuxs.myspringbootmybatis.domain.User;
+import com.wuxs.myspringbootmybatis.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

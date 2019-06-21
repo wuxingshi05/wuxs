@@ -1,6 +1,5 @@
 package com.wuxs.myspringbootmybatis.controller;
 
-import com.wuxs.myspringbootmybatis.domain.User;
 import com.wuxs.myspringbootmybatis.form.RegisteredForm;
 import com.wuxs.myspringbootmybatis.service.UserService;
 import com.wuxs.myspringbootmybatis.util.EmailUtil;
@@ -52,7 +51,7 @@ public class UserController {
      * @param registeredForm
      * @return
      */
-    @RequestMapping(value = "/registered",method = RequestMethod.POST)
+    @RequestMapping(value = "/registered",method = RequestMethod.GET)
     public ModelAndView registered(RegisteredForm registeredForm){
         int result = userService.insertUser(registeredForm);
         if (result == 1){
@@ -81,8 +80,8 @@ public class UserController {
      * 获取验证码
      */
     @RequestMapping(value = "/getCode",method = RequestMethod.GET)
-    public String getCode(String addto){
-        String result = emailUtil.sendSimpleEmail(addto);
+    public int getCode(String addto){
+        int result = emailUtil.sendSimpleEmail(addto);
         return result;
     }
 
