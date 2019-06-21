@@ -5,5 +5,23 @@ spring:
     username: root
     password:
 
+  mail:
+    host: pop.gmail.com
+    port: 465
+    username: wuxingshi05@gmail.com
+    password: wuxingshi666666
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+            required: true
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+
+

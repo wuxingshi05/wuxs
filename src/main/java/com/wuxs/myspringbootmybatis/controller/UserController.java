@@ -3,21 +3,22 @@ package com.wuxs.myspringbootmybatis.controller;
 import com.wuxs.myspringbootmybatis.domain.User;
 import com.wuxs.myspringbootmybatis.form.RegisteredForm;
 import com.wuxs.myspringbootmybatis.service.UserService;
+import com.wuxs.myspringbootmybatis.util.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @RestController
 public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private EmailUtil emailUtil;
 
     /**
      * 跳转首页面
@@ -35,6 +36,15 @@ public class UserController {
     @RequestMapping(value = "/res",method = RequestMethod.GET)
     public ModelAndView res(){
         return new ModelAndView("registered");
+    }
+
+    /**
+     * 跳转更改头像页面
+     * @return
+     */
+    @RequestMapping(value = "/avatar",method = RequestMethod.GET)
+    public ModelAndView avatar(){
+        return new ModelAndView("avatar");
     }
 
     /**
@@ -65,6 +75,15 @@ public class UserController {
             return new ModelAndView("index");
         }
         return new ModelAndView("login");
+    }
+
+    /**
+     * 获取验证码
+     */
+    @RequestMapping(value = "/getCode",method = RequestMethod.GET)
+    public String getCode(String addto){
+        String result = emailUtil.sendSimpleEmail(addto);
+        return result;
     }
 
 }
